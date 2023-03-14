@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        th,td {
+            border: 1px solid black;
+        }
+        #bracket td {width: 128px}
+        .rb {text-align: right;}
+        .cb {text-align: center;}
+        .hide {display: none;}
+        #bracket {margin-left: auto; margin-right: auto; }
+    </style>
+</head>
+<body>
+<h1 class="cb">2023 NCAAMBB Proximity Bracket</h1>
+<div>
+    <p class="cb">
+        <label for="coordstr">Coordinate string: </label><input type="text" id="coordstr">
+    </p>
+    <p class="cb">
+        <label for="latstr">lat: </label><input type="number" id="latstr">
+        <label for="lonstr">lon: </label><input type="number" id="lonstr">
+    </p>
+</div>
+<div>
+<table id="bracket">
+    <thead class="hide">
+        <th>xxxxxx0</th>
+        <th>00000x0</th>
+        <th>0000xxx</th>
+        <th>000xxxx</th>
+        <th>00xxxxx</th>
+        <th>0xxxxxx</th>
+        <th>xxxxxxx</th>
+        <th>1xxxxxx</th>
+        <th>10xxxxx</th>
+        <th>100xxxx</th>
+        <th>1000xxx</th>
+        <th>10000xx</th>
+        <th>100000x</th>
+    </thead>
+    <tr>
+        <td id="000000"></td>
+        <td id="00000x" rowspan="2"></td>
+        <td id="0000xx" rowspan="4"></td>
+        <td id="000xxx" rowspan="8"></td>
+        <td id="00xxxx" rowspan="16"></td>
+        <td id="0xxxxx" rowspan="32"></td>
+        <td id="xxxxxx" class="cb" rowspan="32"></td>
+        <td id="1xxxxx" class="rb" rowspan="32"></td>
+        <td id="10xxxx" class="rb" rowspan="16"></td>
+        <td id="100xxx" class="rb" rowspan="8"></td>
+        <td id="1000xx" class="rb" rowspan="4"></td>
+        <td id="10000x" class="rb" rowspan="2"></td>
+        <td id="100000" class="rb"></td>
+    </tr>
+    <tr>
+        <td id="000001"></td>
+        <td id="100001" class="rb"></td>
+    </tr>
+    <tr>
+        <td id="000010"></td>
+        <td id="00001x" rowspan="2"></td>
+        <td id="10001x" class="rb" rowspan="2"></td>
+        <td id="100010" class="rb"></td>
+    </tr>
+    <tr>
+        <td id="000011"></td>
+        <td id="100011" class="rb"></td>
+    </tr>
+    <tr>
+        <td id="000100"></td>
+        <td id="00010x" rowspan="2"></td>
+        <td id="0001xx" rowspan="4"></td>
+        <td id="1001xx" class="rb" rowspan="4"></td>
+        <td id="10010x" class="rb" rowspan="2"></td>
+        <td id="100100" class="rb"></td>
+    </tr>
+    <tr>
+        <td id="000101"></td>
+        <td id="100101" class="rb"></td>
+    </tr>
+    <tr>
+        <td id="000110"></td>
+        <td id="00011x" rowspan="2"></td>
+        <td id="10011x" class="rb" rowspan="2"></td>
+        <td id="100110" class="rb"></td>
+    </tr>
+    <tr>
+        <td id="000111"></td>
+        <td id="100111" class="rb"></td>
+    </tr>
+    <tr>
+        <td id="001000"></td>
+        <td id="00100x" rowspan="2"></td>
+        <td id="0010xx" rowspan="4"></td>
+        <td id="001xxx" rowspan="8"></td>
+        <td id="101xxx" class="rb" rowspan="8"></td>
+        <td id="1010xx" class="rb" rowspan="4"></td>
+        <td id="10100x" class="rb" rowspan="2"></td>
+        <td id="101000" class="rb"></td>
+    </tr>
+    <tr>
+        <td id="001001"></td>
+        <td id="101001" class="rb"></td>
+    </tr>
+    <tr>
+        <td id="001010"></td>
+        <td id="00101x" rowspan="2"></td>
+        <td id="10101x" class="rb" rowspan="2"></td>
+        <td id="101010" class="rb"></td>
+    </tr>
+    <tr>
+        <td id="001011"></td>
+        <td id="101011" class="rb"></td>
+    </tr>
+    <tr>
+        <td id="001100"></td>
+        <td id="00110x" rowspan="2"></td>
+        <td id="0011xx" rowspan="4"></td>
+        <td id="1011xx" class="rb" rowspan="4"></td>
+        <td id="10110x" class="rb" rowspan="2"></td>
+        <td id="101100" class="rb"></td>
+    </tr>
+    <tr>
+        <td id="001101"></td>
+        <td id="101101" class="rb"></td>
+    </tr>
+    <tr>
+        <td id="001110"></td>
+        <td id="00111x" rowspan="2"></td>
+        <td id="10111x" class="rb" rowspan="2"></td>
+        <td id="101110" class="rb"></td>
+    </tr>
+    <tr>
+        <td id="001111"></td>
+        <td id="101111" class="rb"></td>
+    </tr>
+    <tr>
+        <td id="010000"></td>
+        <td id="01000x" rowspan="2"></td>
+        <td id="0100xx" rowspan="4"></td>
+        <td id="010xxx" rowspan="8"></td>
+        <td id="01xxxx" rowspan="16"></td>
+        <td id="11xxxx" class="rb" rowspan="16"></td>
+        <td id="110xxx" class="rb" rowspan="8"></td>
+        <td id="1100xx" class="rb" rowspan="4"></td>
+        <td id="11000x" class="rb" rowspan="2"></td>
+        <td id="110000" class="rb"></td>
+    </tr>
+    <tr>
+        <td id="010001"></td>
+        <td id="110001" class="rb"></td>
+    </tr>
+    <tr>
+        <td id="010010"></td>
+        <td id="01001x" rowspan="2"></td>
+        <td id="11001x" class="rb" rowspan="2"></td>
+        <td id="110010" class="rb"></td>
+    </tr>
+    <tr>
+        <td id="010011"></td>
+        <td id="110011" class="rb"></td>
+    </tr>
+    <tr>
+        <td id="010100"></td>
+        <td id="01010x" rowspan="2"></td>
+        <td id="0101xx" rowspan="4"></td>
+        <td id="1101xx" class="rb" rowspan="4"></td>
+        <td id="11010x" class="rb" rowspan="2"></td>
+        <td id="110100" class="rb"></td>
+    </tr>
+    <tr>
+        <td id="010101"></td>
+        <td id="110101" class="rb"></td>
+    </tr>
+    <tr>
+        <td id="010110"></td>
+        <td id="01011x" rowspan="2"></td>
+        <td id="11011x" class="rb" rowspan="2"></td>
+        <td id="110110" class="rb"></td>
+    </tr>
+    <tr>
+        <td id="010111"></td>
+        <td id="110111" class="rb"></td>
+    </tr>
+    <tr>
+        <td id="011000"></td>
+        <td id="01100x" rowspan="2"></td>
+        <td id="0110xx" rowspan="4"></td>
+        <td id="011xxx" rowspan="8"></td>
+        <td id="111xxx" class="rb" rowspan="8"></td>
+        <td id="1110xx" class="rb" rowspan="4"></td>
+        <td id="11100x" class="rb" rowspan="2"></td>
+        <td id="111000" class="rb"></td>
+    </tr>
+    <tr>
+        <td id="011001"></td>
+        <td id="111001" class="rb"></td>
+    </tr>
+    <tr>
+        <td id="011010"></td>
+        <td id="01101x" rowspan="2"></td>
+        <td id="11101x" class="rb" rowspan="2"></td>
+        <td id="111010" class="rb"></td>
+    </tr>
+    <tr>
+        <td id="011011"></td>
+        <td id="111011" class="rb"></td>
+    </tr>
+    <tr>
+        <td id="011100"></td>
+        <td id="01110x" rowspan="2"></td>
+        <td id="0111xx" rowspan="4"></td>
+        <td id="1111xx" class="rb" rowspan="4"></td>
+        <td id="11110x" class="rb" rowspan="2"></td>
+        <td id="111100" class="rb"></td>
+    </tr>
+    <tr>
+        <td id="011101"></td>
+        <td id="111101" class="rb"></td>
+    </tr>
+    <tr>
+        <td id="011110"></td>
+        <td id="01111x" rowspan="2"></td>
+        <td id="11111x" class="rb" rowspan="2"></td>
+        <td id="111110" class="rb"></td>
+    </tr>
+    <tr>
+        <td id="011111"></td>
+        <td id="111111" class="rb"></td>
+    </tr>
+</table>
+</div>
+<table id="list">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Dist (mi)</th>
+            <th>Rank</th>
+        </tr>
+    </thead>
+    <tbody id="listbody">
+    </tbody>
+</table>
+<p>Credits:</p>
+<p>Distance math from <a href="https://github.com/chrisveness/geodesy">Geodesy</a></p>
+<p>University positions from <a href="https://maps.google.com/">Google Maps</a></p>
+<script type="module">
+    const unidata = [
+        {"name" : "Alabama", "lat": 33.2140278, "lon" : -87.5413305, tournymask: 0},
+        {"name" : "Texas A&M-CC", "lat": 27.7123168, "lon" : -97.3267626, tourneymask: 1},
+        {"name" : "SE Missouri St", "lat": 37.3148825, "lon" : -89.5302325, tourneymask: 1},
+        {"name" : "Maryland", "lat": 38.9869224, "lon" : -76.944743, tourneymask: 2},
+        {"name" : "West Virginia", "lat": 39.64804, "lon" : -79.9719034, tourneymask: 3},
+        {"name" : "San Diego St", "lat": 32.7774092, "lon" : -117.0735955, tourneymask: 4},
+        {"name" : "Charleston", "lat": 32.7834486, "lon" : -79.9391905, tourneymask: 5},
+        {"name" : "Virginia", "lat": 38.0335571, "lon" : -78.5101659, tourneymask: 6},
+        {"name" : "Furman", "lat": 34.9274785, "lon" : -82.4422566, tourneymask: 7},
+        {"name" : "Crieghton", "lat": 41.2655737, "lon" : -95.949841, tourneymask: 8},
+        {"name" : "NC State", "lat": 35.7846676, "lon" : -78.6842833, tourneymask: 9},
+        {"name" : "Baylor", "lat": 31.5500894, "lon" : -97.1157287, tourneymask: 10},
+        {"name" : "UCSB", "lat": 34.4139673, "lon" : -119.8511357, tourneymask: 11},
+        {"name" : "Missouri", "lat": 38.940385, "lon" : -92.3299262, tourneymask: 12},
+        {"name" : "Utah State", "lat": 41.745165, "lon" : -111.8119312, tourneymask: 13},
+        {"name" : "Arizona", "lat": 32.2318874, "lon" : -110.9512037, tourneymask: 14},
+        {"name" : "Princeton", "lat": 40.3430983, "lon" : -74.6572626, tourneymask: 15},
+        {"name" : "Purdue", "lat": 40.4237095, "lon" : -86.9233833, tourneymask: 16},
+        {"name" : "Texas Southern", "lat": 29.721426, "lon" : -95.3614578, tourneymask: 17},
+        {"name" : "Fairleigh Dickinson", "lat": 40.898245, "lon" : -74.0347893, tourneymask: 17},
+        {"name" : "Memphis", "lat": 35.1187542, "lon" : -89.9396815, tourneymask: 18},
+        {"name" : "FAU", "lat": 26.3749924, "lon" : -80.103252, tourneymask: 19},
+        {"name" : "Duke", "lat": 36.0014301, "lon" : -78.9404173, tourneymask: 20},
+        {"name" : "Oral Roberts", "lat": 36.0508136, "lon" : -95.9550171, tourneymask: 21},
+        {"name" : "Tennessee", "lat": 35.9544056, "lon" : -83.9316451, tourneymask: 22},
+        {"name" : "Louisiana", "lat": 30.2119956, "lon" : -92.0221027, tourneymask: 23},
+        {"name" : "Kentucky", "lat": 38.0306553, "lon" : -84.5061584, tourneymask: 24},
+        {"name" : "Providence", "lat": 41.8440087, "lon" : -71.4369362, tourneymask: 25},
+        {"name" : "Kansas St", "lat": 39.1974478, "lon" : -96.5869136, tourneymask: 26},
+        {"name" : "Montana St", "lat": 45.6673561, "lon" : -111.0568098, tourneymask: 27},
+        {"name" : "Michigan St", "lat": 42.7018519, "lon" : -84.4843606, tourneymask: 28},
+        {"name" : "USC", "lat": 34.0223563, "lon" : -118.2873057, tourneymask: 29},
+        {"name" : "Marquette", "lat": 43.0386991, "lon" : -87.933204, tourneymask: 30},
+        {"name" : "Vermont", "lat": 44.4778566, "lon" : -73.1986524, tourneymask: 31},
+        {"name" : "Houston", "lat": 29.7199535, "lon" : -95.3444221, tourneymask: 32},
+        {"name" : "N Kentucky", "lat": 39.0312076, "lon" : -84.4647232, tourneymask: 33},
+        {"name" : "Iowa", "lat": 41.6627118, "lon" : -91.5571658, tourneymask: 34},
+        {"name" : "Auburn", "lat": 32.5933619, "lon" : -85.497355, tourneymask: 35},
+        {"name" : "Miami", "lat": 25.7173995, "lon" : -80.2803149, tourneymask: 36},
+        {"name" : "Drake", "lat": 41.6031035, "lon" : -93.6568368, tourneymask: 37},
+        {"name" : "Indiana", "lat": 39.168249, "lon" : -86.527492, tourneymask: 38},
+        {"name" : "Kent State", "lat": 41.1497985, "lon" : -81.3455046, tourneymask: 39},
+        {"name" : "Iowa State", "lat": 42.0266613, "lon" : -93.6486403, tourneymask: 40},
+        {"name" : "Mississippi St", "lat": 33.4551787, "lon" : -88.7965653, tourneymask: 41},
+        {"name" : "Pitt", "lat": 40.4443574, "lon" : -79.9630237, tourneymask: 41},
+        {"name" : "Xavier", "lat": 39.1499115, "lon" : -84.4762779, tourneymask: 42},
+        {"name" : "Kennesaw St", "lat": 34.0381829, "lon" : -84.5848599, tourneymask: 43},
+        {"name" : "Texas A&M", "lat": 30.6186852, "lon" : -96.3386542, tourneymask: 44},
+        {"name" : "Penn State", "lat": 40.7982173, "lon" : -77.8620971, tourneymask: 45},
+        {"name" : "Texas", "lat": 30.2849231, "lon" : -97.7362454, tourneymask: 46},
+        {"name" : "Colgate", "lat": 42.8155933, "lon" : -75.5429242, tourneymask: 47},
+        {"name" : "Kansas", "lat": 38.9543481, "lon" : -95.2579848, tourneymask: 48},
+        {"name" : "Howard", "lat": 38.9226885, "lon" : -77.0216264, tourneymask: 49},
+        {"name" : "Arkansas", "lat": 36.0686938, "lon" : -94.1770358, tourneymask: 50},
+        {"name" : "Illinois", "lat": 40.1019564, "lon" : -88.2293502, tourneymask: 51},
+        {"name" : "Saint Mary's", "lat": 37.8408879, "lon" : -122.1111261, tourneymask: 52},
+        {"name" : "VCU", "lat": 37.5526737, "lon" : -77.4549246, tourneymask: 53},
+        {"name" : "UConn", "lat": 41.8077454, "lon" : -72.2561692, tourneymask: 54},
+        {"name" : "Iona", "lat": 40.9270637, "lon" : -73.7885381, tourneymask: 55},
+        {"name" : "TCU", "lat": 32.7078576, "lon" : -97.3649928, tourneymask: 56},
+        {"name" : "Arizona St", "lat": 33.4242444, "lon" : -111.9302414, tourneymask: 57},
+        {"name" : "Nevada", "lat": 39.5437246, "lon" : -119.8163469, tourneymask: 57},
+        {"name" : "Gonzaga", "lat": 47.6658584, "lon" : -117.404304, tourneymask: 58},
+        {"name" : "Grand Canyon", "lat": 33.5100384, "lon" : -112.1310475, tourneymask: 59},
+        {"name" : "Northwestern", "lat": 42.0564634, "lon" : -87.6774557, tourneymask: 60},
+        {"name" : "Boise St", "lat": 43.6028799, "lon" : -116.2020606, tourneymask: 61},
+        {"name" : "UCLA", "lat": 34.0689254, "lon" : -118.4473698, tourneymask: 62},
+        {"name" : "UNC Asheville", "lat": 35.617083, "lon" : -82.5710179, tourneymask: 63}
+    ];
+
+    import LatLon from 'https://cdn.jsdelivr.net/npm/geodesy@2.4.0/latlon-ellipsoidal-vincenty.min.js';
+
+    const latlonre = /(-?[0-9]+(?:.[0-9]+)?), *(-?[0-9]+(?:.[0-9]+)?)/;
+    document.getElementById("coordstr").addEventListener("input", () => {
+        let elm = document.getElementById("coordstr");
+        let m = elm.value.match(latlonre);
+        if (m) {
+            // console.dir(["coor input",m[1],m[2]]);
+            document.getElementById("latstr").value = m[1];
+            document.getElementById("lonstr").value = m[2];
+            updateBrackets();
+        }
+    });
+    
+    const numre = /(-?[0-9]+(.[0-9]+)?)/;
+
+    document.getElementById("latstr").addEventListener("input", latlonchange);
+    
+    document.getElementById("lonstr").addEventListener("input", latlonchange);
+    
+    function latlonchange(event) {
+        let latm = document.getElementById("latstr").value.match(numre);
+        let lonm = document.getElementById("lonstr").value.match(numre);
+        if (latm && lonm) {
+            document.getElementById("coordstr").value = latm[1] + ", " +  lonm[1];
+            updateBrackets();
+        }
+    }
+
+    unidata.forEach(element => {
+        const binstr = (element.tourneymask ?? 0).toString(2).padStart(6,"0");
+        const rep = document.getElementById(binstr);
+        rep.textContent = element.name;
+    });
+
+    function updateBrackets() {
+
+        const mylatlon = new LatLon(document.getElementById("latstr").value, document.getElementById("lonstr").value); 
+
+        unidata.forEach(element => {
+            const uniLatLon = new LatLon(element.lat, element.lon);
+            element["dist"] = mylatlon.distanceTo(uniLatLon);
+        });
+
+        unidata.sort((a,b) => {
+            return a.dist - b.dist;
+        });
+
+        const lb = document.getElementById("listbody");
+        while (lb.firstChild) {
+            lb.removeChild(lb.firstChild);
+        }
+
+        unidata.forEach((element,idx) => {
+            const newrow = document.createElement("tr");
+            const tdname = document.createElement("td"); tdname.textContent = element.name; newrow.appendChild(tdname);
+            const tddist = document.createElement("td"); tddist.textContent = (element.dist / 1600).toFixed(2); newrow.appendChild(tddist);
+            const tdrank = document.createElement("td"); tdrank.textContent = idx + 1; newrow.appendChild(tdrank);
+            lb.appendChild(newrow);
+        });
+
+        unidata.reverse();
+        unidata.forEach((element) => {
+            const binstr = (element.tourneymask ?? 0).toString(2).padStart(6,"0");
+            for(let i = 6; i >= 0; i--) {
+                const findID = binstr.substring(0,i).padEnd(6,"x");
+                const rep = document.getElementById(findID);
+                rep.textContent = element.name;
+            }
+        });
+    }
+</script>
+</body>
+</html>
